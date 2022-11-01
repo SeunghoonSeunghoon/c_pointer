@@ -1,0 +1,16 @@
+#include <stdio.h>
+typedef struct
+{
+    int a;
+    int b;
+}asdf; // 형식을 정의(typedef)
+
+int main()
+{
+    asdf *a; // 구조체 포인터 선언.(구조체를 가리키는 포인터)
+    a->a = 1234;
+    a->b = 1324; // 화살표를 이용하여 포인터 속 구조체로 이동(포인터로 한번 참조 구조체로 한번 참조. 총 2번 참조하기 때문에)
+    printf("%d",a->a); // 구조체 asdf 속 a 출력
+
+return 0;
+}
